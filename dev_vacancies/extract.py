@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-class Common:
+class Extract:
 
     MAIN_URL = 'https://jobs.dev.by'
 
@@ -28,11 +28,8 @@ class Common:
 
     def get_data(self):
         for el in map(lambda x, y: [x, y], self.get_summary_and_link(), self.get_company_name()):
-            yield el[0][0], el[0][1], el[1]
+            text_for_vacancy = el[0][0]
+            link_to_vacancy = el[0][1]
+            company_name = el[1]
 
-
-
-# c = Common()
-# r = c.get_data()
-# # r = c.tmp()
-# print(list(r))
+            yield text_for_vacancy, link_to_vacancy, company_name
