@@ -11,7 +11,7 @@ class ETLTask(luigi.Task):
         super().__init__(context)
         self._completed = False
         self.dev_data = None
-        self._client = pymongo.MongoClient()
+        self._client = pymongo.MongoClient(port=27100)
         self._db = self._client[self.context["mongo_database"]]
 
     @property
