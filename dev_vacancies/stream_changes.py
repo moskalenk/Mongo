@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 import pymongo.errors
-from telegramm_bot import send_message
+from dev_vacancies.telegramm_bot import send_message
 
 
 def main():

@@ -1,7 +1,7 @@
 import luigi
 import pymongo
-from extract import Extract
-import load
+from dev_vacancies.extract import Extract
+from dev_vacancies import load
 
 
 class ETLTask(luigi.Task):
