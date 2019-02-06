@@ -33,3 +33,8 @@ class Extract:
             company_name = el[1]
 
             yield text_for_vacancy, link_to_vacancy, company_name
+
+
+if __name__ == '__main__':
+    extract_obj = Extract()
+    extract_obj.get_data()
