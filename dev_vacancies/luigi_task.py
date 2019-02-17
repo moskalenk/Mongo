@@ -1,6 +1,6 @@
 import luigi
 import pymongo
-from dev_vacancies.extract import Extract
+from dev_vacancies.destination_collection import Extract
 from dev_vacancies import load
 
 

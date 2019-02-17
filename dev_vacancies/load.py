@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from dev_vacancies.extract import Extract
+from dev_vacancies.destination_collection import Extract
 
 
 def load_data_to_collection(data, collection_name):
